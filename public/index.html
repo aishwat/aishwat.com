@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Aishwat</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <!-- <meta name="viewport" content="initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!--  -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.4/angular-material.min.css" />
+    <script>
+    window['angular-material'] || document.write('<link rel="stylesheet" href="stylesheets/angular-material.min.css">\x3C/script>')
+    </script>
+    <!--  -->
+    <script src="https://secure.skypeassets.com/i/scom/js/skype-uri.js" async></script>
+    <script>
+    window['skype-uri'] || document.write('<script src="javascripts/skype-uri.js" async>\x3C/script>')
+    </script>
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script>
+    window.angular || document.write('<script src="javascripts/angular.min.js">\x3C/script>')
+    </script>
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.min.js"></script>
+    <script>
+    window['angular-animate'] || document.write('<script src="javascripts/angular-animate.min.js">\x3C/script>')
+    </script>
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.min.js"></script>
+    <script>
+    window['angular-aria'] || document.write('<script src="javascripts/angular-aria.min.js">\x3C/script>')
+    </script>
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.4/angular-material.min.js"></script>
+    <script>
+    window['angular-material'] || document.write('<script src="javascripts/angular-material.min.js">\x3C/script>')
+    </script>
+    <!--  -->
+</head>
+<script src="scripts/app.js"></script>
+<script src="scripts/ctrl.js"></script>
+<script src="scripts/services.js"></script>
+
+<body ng-app="materialApp" ng-controller="HomeCtrl" style="height: 100%;" layout="column" ng-class="{loaded:hideSplash}">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+    </div>
+    <md-content style="padding:20px 20px 20px 20px;">
+        <md-grid-list md-cols="4" md-cols-xs="2" md-row-height="1:1" md-gutter="12px" class="gridList">
+            <md-grid-tile md-rowspan={{tiles[0].row_span}} md-colspan={{tiles[0].col_span}} md-rowspan-xs={{tiles[0].row_span_xs}} md-colspan-xs={{tiles[0].col_span_xs}} class="custom-tile pink" md-ink-ripple="#FFFFFF" ng-click="tiles[0].click()">
+                <div>
+                    <md-icon md-svg-icon="nerd9" style="display: inline-block"></md-icon>
+                    <p style="display: inline-block;color:#cccccc;" ng-show="tiles[0].showDetails">&nbsp;hey!</p>
+                </div>
+                <div class="footer">
+                    aishwat
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[1].row_span}} md-colspan={{tiles[1].col_span}} md-rowspan-xs={{tiles[1].row_span_xs}} md-colspan-xs={{tiles[1].col_span_xs}} class="custom-tile purple" md-ink-ripple="#FFFFFF" ng-click="tiles[1].click()">
+                <div ng-hide="tiles[1].showDetails">
+                    <md-icon md-svg-icon="about_me"></md-icon>
+                </div>
+                <div ng-show="tiles[1].showDetails" style="word-wrap: break-word;text-transform: none;font-size: {{tile1_text_size}};text-align:left;white-space: pre-wrap;background:none;position:absolute;top:10px;left:10px;right:10px;bottom:10px;">
+                    <div style="background:none;position:absolute;top:0px;left:0px;width:100%;height:100%;">{{about_me.text}}</div>
+                </div>
+                <div class="footer" ng-hide="tiles[1].showDetails">
+                    about me
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[2].row_span}} md-colspan={{tiles[2].col_span}} md-rowspan-xs={{tiles[2].row_span_xs}} md-colspan-xs={{tiles[2].col_span_xs}} class="custom-tile cyan" md-ink-ripple="#FFFFFF" ng-click="tiles[2].click()">
+                <div ng-hide="tiles[2].showDetails">
+                    <md-icon md-svg-icon="student"></md-icon>
+                </div>
+                <div layout="column" ng-show="tiles[2].showDetails" style="display:block;background:none;max-height:100%;padding-left:10px;padding-right:10px;font-size: {{tile2_text_size}};" layout-align="center center">
+                    <div style="background:none;">
+                        <table class="table1" style="text-align:left">
+                            <tr>
+                                <th colspan="2">College</th>
+                            </tr>
+                            <tr>
+                                <td>National Institute of Technology, Goa Bachelor of Technology
+                                    <br>
+                                    <p style="font-size: 10px;line-height:0px;">Computer Science & Engineering</p>
+                                </td>
+                                <td style="text-align:right">May 2010 – May 2014
+                                    <br>CGPA: 9.17/10</td>
+                            </tr>
+                        </table>
+                    </div>
+                    &nbsp;
+                    <div style="background:none;">
+                        <table class="table1" style="text-align:left">
+                            <tr>
+                                <th colspan="2">School</th>
+                            </tr>
+                            <tr>
+                                <td>Sir Padampat Singhania Education Centre Higher Secondary Examination (10+2)</br>
+                                    <p style="font-size: 10px;line-height:0px;">CBSE Board</p>
+                                </td>
+                                <td style="text-align: right;">March 2009</br>Marks: 91.04%</td>
+                            </tr>
+                            <tr>
+                                <td>St.Anthony Sen. Sec. School Secondary School Examination</br>
+                                    <p style="font-size: 10px;line-height:0px;">CBSE Board</p>
+                                </td>
+                                <td style="text-align: right;">March 2007</br>Marks: 82.07%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="footer" ng-hide="tiles[2].showDetails">
+                    Academics
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[3].row_span}} md-colspan={{tiles[3].col_span}} md-rowspan-xs={{tiles[3].row_span_xs}} md-colspan-xs={{tiles[3].col_span_xs}} class="custom-tile amber" md-ink-ripple="#FFFFFF" ng-click="tiles[3].click()">
+                <div ng-hide="tiles[3].showDetails">
+                    <md-icon md-svg-icon="social"></md-icon>
+                </div>
+                <div layout="row" layout-sm="row" layout-align="center center" layout-wrap ng-show="tiles[3].showDetails">
+                    <md-button class="md-fab md-mini indigo margin animate-show" aria-label="fb" ng-click="fb();$event.stopPropagation();" ng-show="show_fb">
+                        <md-icon md-svg-icon="fb"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini red margin animate-show" aria-label="gmail" ng-click="gmail();$event.stopPropagation();" ng-show="show_gmail">
+                        <md-icon md-svg-icon="gmail"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini deep-orange margin animate-show" aria-label="g+" ng-click="g_plus();$event.stopPropagation();" ng-show="show_g_plus">
+                        <md-icon md-svg-icon="g+"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini light-blue margin animate-show" aria-label="linkedin" ng-click="linkedin();$event.stopPropagation();" ng-show="show_linkedin">
+                        <md-icon md-svg-icon="linkedin"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini cyan margin animate-show" aria-label="skype" ng-click="skype();$event.stopPropagation();" ng-show="show_skype">
+                        <md-icon md-svg-icon="skype"></md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini light-green margin animate-show" aria-label="phone" ng-click="phone();$event.stopPropagation();" ng-show="show_phone">
+                        <md-icon md-svg-icon="phone"></md-icon>
+                    </md-button>
+                </div>
+                <div class="footer" ng-hide="tiles[3].showDetails">
+                    social
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[4].row_span}} md-colspan={{tiles[4].col_span}} md-rowspan-xs={{tiles[4].row_span_xs}} md-colspan-xs={{tiles[4].col_span_xs}} class="custom-tile light-blue" md-ink-ripple="#FFFFFF" ng-click="tiles[4].click()">
+                <div ng-hide="tiles[4].showDetails">
+                    <md-icon md-svg-icon="resume"></md-icon>
+                </div>
+                <div ng-show="tiles[4].showDetails" style="background-color:#D0D0D0;position:absolute;top:0px;left:0px;width:100%;height:90%">
+                    <object ng-show="content" data="{{content}}" type="application/pdf" style="width: 100%; height: 100%;"></object>
+                </div>
+                <div class="footer">
+                    {{resume_text}}
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[5].row_span}} md-colspan={{tiles[5].col_span}} md-rowspan-xs={{tiles[5].row_span_xs}} md-colspan-xs={{tiles[5].col_span_xs}} class="custom-tile red" md-ink-ripple="#FFFFFF" ng-click="tiles[5].click()">
+                <div ng-hide="tiles[5].showDetails">
+                    <md-icon md-svg-icon="work1"></md-icon>
+                </div>
+                <div layout="column" ng-show="tiles[5].showDetails" style="display:block;background:none;max-height:100%;padding-left:10px;padding-right:10px;font-size: {{tile5_text_size}};text-transform: none;" layout-align="center center">
+                    <div style="background:none;">
+                        <table class="table2" style="text-align:left">
+                            <tr>
+                                <th colspan="2">INTERNSHIP</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">CERN (European Organization for Nuclear Research)</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>Trainee at CMS Experiment</td>
+                            </tr>
+                            <tr>
+                                <td>Project</td>
+                                <td>Comparison of Luminosity Measurement Methods (hf and et-sum)</td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td>2 months (15May2013 - 15July2013)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    &nbsp;
+                    <div style="background:none;">
+                        <table class="table2" style="text-align:left">
+                            <tr>
+                                <th colspan="2">WORK EXPERIENCE</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {{work_ex.text}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="footer" ng-hide="tiles[5].showDetails">
+                    Internship And Work Ex
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[6].row_span}} md-colspan={{tiles[6].col_span}} md-rowspan-xs={{tiles[6].row_span_xs}} md-colspan-xs={{tiles[6].col_span_xs}} class="custom-tile indigo" md-ink-ripple="#FFFFFF" ng-click="tiles[6].click()">
+                <div ng-hide="tiles[6].showDetails">
+                    <md-icon md-svg-icon="r2"></md-icon>
+                </div>
+                <div layout="column" ng-show="tiles[6].showDetails" style="display:block;background:none;max-height:100%;padding-left:10px;padding-right:10px;font-size: {{tile6_text_size}};text-transform: none;width:98%;" layout-align="center center">
+                    <table class="table3" style="text-align:left">
+                        <tr>
+                            <th>Language</th>
+                            <th>Beginner</th>
+                            <th style="text-align:right">Skilled</th>
+                        </tr>
+                        <tr ng-repeat="obj in programming_skills">
+                            <td>{{obj.language}}</td>
+                            <td colspan="2" style="background:none;" class="fulljustify anim">
+                                <div ng-repeat="x in obj.rating track by $index" style="display: inline-block;background:none;" class="animate-repeat">
+                                    <md-icon md-svg-icon={{x}} style="padding:{{tile6_padding}}"></md-icon>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer" ng-hide="tiles[6].showDetails">
+                    Programming Languages
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[7].row_span}} md-colspan={{tiles[7].col_span}} md-rowspan-xs={{tiles[7].row_span_xs}} md-colspan-xs={{tiles[7].col_span_xs}} class="custom-tile deep-orange" md-ink-ripple="#FFFFFF" ng-click="tiles[7].click()">
+                <div ng-hide="tiles[7].showDetails" class="anim">
+                    <md-icon md-svg-icon="projects"></md-icon>
+                </div>
+                <div ng-show="tiles[7].showDetails" style="font-size:15px;text-align:left;text-transform: none;line-height:1.5em;background:none;position:absolute;top:10px;left:10px;right:10px;">
+                    <md-whiteframe class="md-whiteframe-1dp" layout layout-align="start start" ng-click="toggleProjectDetails($index);$event.stopPropagation();" ng-repeat="data in project_data track by $index">
+                        <table class="table4" style="table-layout:{{table4Layout}};">
+                            <tr>
+                                <td style="font-size:20px;font-weight:bold;color:#5c6bc0;padding-top:10px;" colspan="2">{{data.title}}
+                                    <div style="display:inline-block; float:right;margin: auto;">
+                                        <md-icon md-svg-icon={{title_icon[$index]}}></md-icon>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr ng-show="showProjectDetails[$index]">
+                                <td colspan="2" style="color:#686868;">{{data.desc}}</td>
+                            </tr>
+                            <tr ng-show="showProjectDetails[$index]">
+                                <th>Role</th>
+                                <td>{{data.role}}</td>
+                            </tr>
+                            <tr ng-show="showProjectDetails[$index]">
+                                <th>Platform / Framework</th>
+                                <td>{{data.platform_framework}}</td>
+                            </tr>
+                            <tr ng-show="showProjectDetails[$index]">
+                                <th>Responsibilities</th>
+                                <td style="white-space: pre;">{{data.resp}}</td>
+                            </tr>
+                            <tr ng-show="showProjectDetails[$index]">
+                                <th>Duration</th>
+                                <td>{{data.duration}}</td>
+                            </tr>
+                        </table>
+                    </md-whiteframe>
+                    &nbsp;
+                </div>
+                </div>
+                <div class="footer" ng-hide="tiles[7].showDetails">
+                    Enterprise projects
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[8].row_span}} md-colspan={{tiles[8].col_span}} md-rowspan-xs={{tiles[8].row_span_xs}} md-colspan-xs={{tiles[8].col_span_xs}} class="custom-tile light-green" md-ink-ripple="#FFFFFF" ng-click="tiles[8].click()">
+                <div ng-hide="tiles[8].showDetails">
+                    <md-icon md-svg-icon="git"></md-icon>
+                </div>
+                <div ng-show="tiles[8].showDetails" href="https://github.com/aishwat " target="_blank" style="text-decoration:none">
+                    <md-icon md-svg-icon="git"></md-icon>
+                    <a href="https://github.com/aishwat " target="_blank" style="text-decoration:none">
+                                &nbsp;&nbsp;&nbsp; Have a look at my git repos <p style="font-size:12px">
+                                github.com/aishwat
+                                </p>
+                                </a>
+                </div>
+                <div class="footer" ng-hide="tiles[8].showDetails">
+                    open source projects
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[9].row_span}} md-colspan={{tiles[9].col_span}} md-rowspan-xs={{tiles[9].row_span_xs}} md-colspan-xs={{tiles[9].col_span_xs}} class="custom-tile cyan" md-ink-ripple="#FFFFFF" ng-click="tiles[9].click()">
+                <div ng-hide="tiles[9].showDetails">
+                    <md-icon md-svg-icon="source"></md-icon>
+                </div>
+                <div ng-show="tiles[9].showDetails" style="text-align:left;margin-left:10px;color:WHITE;line-height:1.5em;text-size:14px;width:100%;max-height:100%;">
+                    <table class="table5">
+                        <tr>
+                            <td>
+                                Tiles Concept
+                            </td>
+                            <td>
+                                <a style="background:none;" href="http://codepen.io/zavoloklom/pen/wtApI" target="_blank">Material Design Tiles - A PEN BY Sergey Kupletsky</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Splash Concept
+                            </td>
+                            <td>
+                                <a style="background:none;" href="https://ihatetomatoes.net/demos/css3-preloader-transition/" target="_blank">ihatetomatoes.net</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Icons
+                            </td>
+                            <td>
+                                <a href="http://www.flaticon.com" target="_blank">Flaticon</a> And <a href="https://materialdesignicons.com/" target="_blank">Material Design Icons</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Frameworks Used
+                            </td>
+                            <td>
+                                Node.js, Angular js, Angular Material
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Services
+                            </td>
+                            <td>
+                                Domain - Namecheap, &nbsp;Server - AWS EC2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                copyright ©2016-2017
+                            </td>
+                            <td>
+                                Aah! Just Kidding :D
+                                <!--  <a href="http://www.dmca.com/Protection/Status.aspx?ID=a8110f17-7ad1-4cd4-9f63-a346d42ccf3a" title="DMCA.com Protection Status" class="dmca-badge"> <img src="http://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=a8110f17-7ad1-4cd4-9f63-a346d42ccf3a" alt="DMCA.com Protection Status" /></a> -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer" ng-hide="tiles[9].showDetails">
+                    Credits And Source
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[10].row_span}} md-colspan={{tiles[10].col_span}} md-rowspan-xs={{tiles[10].row_span_xs}} md-colspan-xs={{tiles[10].col_span_xs}} class="custom-tile light-purple" md-ink-ripple="#FFFFFF" ng-click="tiles[10].click()">
+                <div ng-hide="tiles[10].showDetails">
+                    <md-icon md-svg-icon="feedback"></md-icon>
+                </div>
+                <div ng-show="tiles[10].showDetails" ng-click="$event.stopPropagation();" style="width:97%;max-height:95%;text-transform: none;" layout="column" ng-cloak>
+                    <md-content class="custom_icons" style="padding-left:5px;padding-right:5px;background:rgba(255,255,255,0.95)">
+                        <md-input-container class="md-block">
+                            <md-icon md-svg-src="./assets/svg/name.svg" class="name"></md-icon>
+                            <input ng-model="user.name" type="text" placeholder="Name (Optional)" ng-required="false">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <md-icon md-svg-src="./assets/svg/email.svg" class="email"></md-icon>
+                            <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <md-icon md-svg-src="./assets/svg/feedback.svg" class="text"></md-icon>
+                            <input ng-model="user.text" type="text" placeholder="Feedback / Suggestions" md-minlength="0" md-maxlength="200">
+                        </md-input-container>
+                    </md-content>
+                    <md-progress-linear md-mode="determinate" value={{feedback_progress}} style="width:100%"></md-progress-linear>
+                    <div style="display:inline-block;background:none;">
+                        <md-button class="md-raised md-warn" style="float:left;width:45%;margin-left:0px;" ng-click="tiles[10].click();$event.stopPropagation();">Close</md-button>
+                        <md-button class="md-raised" style="float:right;width:45%;margin-right:0px;background:white;" ng-click="feedback();$event.stopPropagation();" ng-disabled="!(user.email&&user.text)||feedInProgress">Submit
+                        </md-button>
+                    </div>
+                </div>
+                <div class="footer" ng-hide="tiles[10].showDetails">
+                    Feedback or Suggestions
+                </div>
+            </md-grid-tile>
+            <!--  -->
+            <md-grid-tile md-rowspan={{tiles[11].row_span}} md-colspan={{tiles[11].col_span}} md-rowspan-xs={{tiles[11].row_span_xs}} md-colspan-xs={{tiles[11].col_span_xs}} class="custom-tile grey" md-ink-ripple="#FFFFFF" ng-click="tiles[11].click()">
+                <div ng-hide="tiles[11].showDetails">
+                    <md-icon md-svg-icon="ufo"></md-icon>
+                </div>
+                <div ng-show="tiles[11].showDetails" style="text-decoration:none;width:100%;max-height:100%;background:none;" layout="column">
+                    <md-button class="md-raised {{tile11_warn}}" ng-click="show_hide_all();$event.stopPropagation();">{{tile11_btn1_text}}</md-button>
+                    &nbsp;
+                    <md-button class="md-raised" ng-click="toggleLike();$event.stopPropagation();" ng-disabled="likeInProgress">
+                        {{tile11_btn2_text}}
+                        <div class="md-icon-button md-accent" aria-label="Favorite" style="width:45%;float:right;">
+                            <md-icon md-svg-icon={{like_icon}} style="color:#FF4081"></md-icon>
+                        </div>
+                        <!--  -->
+                    </md-button>
+                </div>
+                <div class="footer" ng-hide="tiles[11].showDetails">
+                    Unknown
+                </div>
+            </md-grid-tile>
+        </md-grid-list>
+        <!--  -->
+    </md-content>
+</body>
+
+</html>

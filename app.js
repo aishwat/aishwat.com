@@ -15,7 +15,7 @@ var app = express();
 var compress = require('compression');
 app.use(compress());
 
-app.use(scribe.express.logger());
+// app.use(scribe.express.logger());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

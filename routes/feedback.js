@@ -6,7 +6,7 @@ var transporter = nodemailer.createTransport('smtps://stag.stacks@gmail.com:' + 
 
 var feedback = {
     save: function(req, res, next) {
-
+        process.console.tag("Feedback").log("FEEDBACK");
         if (req.body.email && req.body.text) {
             var mailOptions = {
                 from: 'stag.stacks@gmail.com',

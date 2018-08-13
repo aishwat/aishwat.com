@@ -8,7 +8,7 @@ router.get('/like', like_dislike.like);
 router.get('/dislike', like_dislike.dislike);
 
 router.get('*', function(req, res, next) {
-	// process.console.tag('view').log("Ip: "+req.ip);
+	process.console.tag('view').log("Ip: "+req.ip);
     res.redirect('/index.html');
 });
 

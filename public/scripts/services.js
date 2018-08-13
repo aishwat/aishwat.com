@@ -8,8 +8,8 @@ function feedbackService($http) {
         save: function(data, successCallback, errorCallback) {
             console.log("In Feedback Service")
             console.log(data);
-            // var url="https://aishwat.com/feedback";
-            var url = "http://localhost:3000/feedback" //testing
+            var url="https://aishwat.com/feedback";
+            // var url = "http://localhost:3000/feedback" //testing
             $http({
                 method: 'POST',
                 url: url,
@@ -27,8 +27,8 @@ function likeDislikeService($http) {
         send: function(url_append, successCallback, errorCallback) {
             console.log("In LikeDislike Service")
             console.log(url_append);
-            // var url="https://aishwat.com/"+url_append;
-            var url = "http://localhost:3000/"+url_append+"?timestamp="+Date.now(); //testing
+            var url="https://aishwat.com/"+url_append;
+            // var url = "http://localhost:3000/"+url_append+"?timestamp="+Date.now(); //testing
             $http({
                 method: 'GET',
                 url: url,

@@ -188,7 +188,7 @@
                 </div>
                 <div layout="column" ng-show="tiles[5].showDetails" style="display:block;background:none;max-height:100%;padding-left:10px;padding-right:10px;font-size: {{tile5_text_size}};text-transform: none;" layout-align="center center">
                     <div style="background:none;">
-                        <table class="table2" style="text-align:left">
+                        <table class="table2" style="text-align:left; margin-top: 10px;">
                             <tr>
                                 <th colspan="2">INTERNSHIP</th>
                             </tr>
@@ -211,7 +211,7 @@
                     </div>
                     &nbsp;
                     <div style="background:none;">
-                        <table class="table2" style="text-align:left">
+                        <table class="table2" style="text-align:left; margin-bottom:10px;">
                             <tr>
                                 <th colspan="2">WORK EXPERIENCE</th>
                             </tr>
@@ -233,7 +233,7 @@
                     <md-icon md-svg-icon="r2"></md-icon>
                 </div>
                 <div layout="column" ng-show="tiles[6].showDetails" style="display:block;background:none;max-height:100%;padding-left:10px;padding-right:10px;font-size: {{tile6_text_size}};text-transform: none;width:98%;" layout-align="center center">
-                    <table class="table3" style="text-align:left">
+                    <table class="table3" style="text-align:left; margin-top: 10px; margin-bottom:10px;">
                         <tr>
                             <th>Language</th>
                             <th>Beginner</th>
@@ -260,7 +260,7 @@
                 </div>
                 <div ng-show="tiles[7].showDetails" style="font-size:15px;text-align:left;text-transform: none;line-height:1.5em;background:none;position:absolute;top:10px;left:10px;right:10px;">
                     <md-whiteframe class="md-whiteframe-1dp" layout layout-align="start start" ng-click="toggleProjectDetails($index);$event.stopPropagation();" ng-repeat="data in project_data track by $index">
-                        <table class="table4" style="table-layout:{{table4Layout}};">
+                        <table class="table4" style="table-layout:{{table4Layout}}; margin-left:10px; right:10px; margin-bottoms:4px;">
                             <tr>
                                 <td style="font-size:20px;font-weight:bold;color:#5c6bc0;padding-top:10px;" colspan="2">{{data.title}}
                                     <div style="display:inline-block; float:right;margin: auto;">
@@ -294,6 +294,9 @@
                 </div>
                 <div class="footer" ng-hide="tiles[7].showDetails">
                     Enterprise projects
+                </div>
+                <div class="footer" ng-show="tiles[7].showDetails">
+                    Tap orange area to minimize
                 </div>
             </md-grid-tile>
             <!--  -->
@@ -357,16 +360,15 @@
                                 Services
                             </td>
                             <td>
-                                Domain - Namecheap, &nbsp;Server - AWS EC2
+                                Domain - Namecheap, &nbsp;Server - DigitalOcean
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                copyright ©2016-2017
+                                copyright ©2018-2019
                             </td>
                             <td>
-                                Aah! Just Kidding :D
-                                <!--  <a href="http://www.dmca.com/Protection/Status.aspx?ID=a8110f17-7ad1-4cd4-9f63-a346d42ccf3a" title="DMCA.com Protection Status" class="dmca-badge"> <img src="http://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=a8110f17-7ad1-4cd4-9f63-a346d42ccf3a" alt="DMCA.com Protection Status" /></a> -->
+                                  <a href="http://www.dmca.com/Protection/Status.aspx?ID=a8110f17-7ad1-4cd4-9f63-a346d42ccf3a" title="DMCA.com Protection Status" class="dmca-badge"> <img src="/assets/dmca_protected.png" alt="DMCA.com Protection Status" /></a>
                             </td>
                         </tr>
                     </table>

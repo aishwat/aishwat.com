@@ -35,66 +35,114 @@ function homeCtrl($document, $scope, $window, $mdToast, $http, $sce, $mdMedia, $
     console.log($scope.tiles);
 
     $scope.project_data = [{
-        title: "Mobi Assets",
-        desc: "This project involved development of Tesco's MobiAsset mobile application for tracking mobile devices available for testing. User could register the device to server and allocate or deallocate devices to his/her name and can view available free devices within the team so that he/she can take more devices based on the needs.",
-        role: "Android Developer, Server Developer",
-        platform_framework: "Native Android, Node.js (Express), Mongo DB",
-        resp: "Android Network Operations\nServer API Development\nUnit Testing and code coverage using Mocha\nAutomation using Supertest ",
-        duration: "1 Month Android, 3 Month Server"
-    }, {
         title: "Store Empowerment",
-        desc: "This project involves development of Tesco's Store Empowerment mobile application for iPhone, Windows and Android mobile devices. Store Managers can view store orders and items which need replenishment. Provides KPI data (Key Performance Indicators) for all stores. Helps customers in locating their product. Providing Authentication service to users by JWT (Json Web Tokens) Built this server from scratch, running under IIS for scalability.",
+        desc: `This project involved development of Tesco's Store Empowerment mobile application. Using this app store managers can view existing store orders, inventory information and if needed can place new orders. It also provided KPI data (Key Performance Indicators) of stores and helped customers in locating their product in store.
+For authentication service I used JWT (JSON Web Tokens) and built this server from scratch, running under IIS for scalability. 
+Available at https://labs.ocset.net/smapp`,
         role: "Server Developer",
-        platform_framework: "Node.js (Express), Couchbase, jwt.io",
-        resp: "Server API Development.\nImplementation of portal for in house distribution of apps.",
-        duration: "7 Month"
+        platform_framework: "NodeJS (Express), Couchbase, JWT.IO, AWS",
+        resp: "Server API Development \n" +
+        "Authentication and Authorization\n" +
+        "Implementation of portal for in house distribution of apps\n",
+        duration: "1 Year 2 Months"
+    }, {
+        title: "Mobi Assets",
+        desc: "This project involved development of Tesco's MobiAsset mobile application for tracking mobile devices available for testing. User could register the device to server and allocate or de-allocate devices to his/her name and can view available/free devices within the team so that he/she can take more devices based on the needs.",
+        role: "Android Developer",
+        platform_framework: "Native Android, Android SDK",
+        resp: "Android Network Operations and App layouts\n" +
+        "Unit Testing and code coverage using Mocha\n" +
+        "Automation using Supertest \n",
+        duration: "4 Months"
     }, {
         title: "Digital Clubcard",
-        desc: "This project involves development of Tesco's customer facing Digital Clubcard app. It allows users to view their coupons, points and redeem the coupons. It also allows users to make payment using wallet, locate nearest stores, etc.",
+        desc: "This is Tesco's customer facing Digital Clubcard app. It allows users to view their coupons, points and redeem the coupons. It also allows users to make payment using wallet, locate nearest stores using geofencing, etc",
         role: "Hybrid App Developer",
-        platform_framework: "Angular.js, Cordova , Ionic",
-        resp: "Hybrid App development using Angular, Cordova and ionic\nStore locator using Google maps Javascript\nIntegrating web view components with Native app.",
-        duration: "3 Month"
-    }]
+        platform_framework: "AngularJS, Cordova , Ionic",
+        resp: "Hybrid App development using Angular, Cordova and ionic\n" +
+        "Store locator using Google maps Javascript \n" +
+        "Integrating web view components with Native app.\n ",
+        duration: "3 Months"
+    },
+        {
+            title: "Grocery App",
+            desc: "Tesco's Grocery shopping app for customers to order/shop grocery. Involved showing grocery list and product details page to make better user experience. And apple wallet integrations for payments.",
+            role: "Swift iOS Developer",
+            platform_framework: "Xcode , Swift3",
+            resp: "Native App development using xcode \n" +
+            "Product details page \n" +
+            "Grocery list loading\n",
+            duration: "3 Months"
+        },
+        {
+            title: "Personalization Features - Target.com",
+            desc: "This involved building Target dot com's recommendation page, which shows a personalized page based on customer's past shopping, loved products and relevant deals. Developed various sections like \"pick up where you left off\" allowing customer to resume shopping based on past product views, \"deals for you\" to show relevant deals, \"new in popular categories\" to provide category based recommendations. \nRecommendations Page: https://www.target.com/yr",
+            role: "ReactJS Developer ",
+            platform_framework: "Javascript, ReactJS, Redux",
+            resp: "Designing algorithms to get relevant recommendations\n" +
+            "Front end ReactJS components \n",
+            duration: "8 Months"
+        },
+        {
+            title: "Awesomeshop Feature - Target.com",
+            desc: "To leverage social networks like Instagram, we created a personalization feature called \"Awesomeshop\" which provides recommendation to customers by aptly integrating their loved products and trending Target products on Instagram. It also presents a real life (Instagram posted) image to other customers. \n" +
+            "Section: \"inspired by #TargetStyles\" at https://www.target.com/yr\n",
+            role: "ReactJS Developer ",
+            platform_framework: "ReactJS, Redux, GraphQL",
+            resp: "GraphQL implementation to combine TargetFinds(instagram feed) and customer loved products",
+            duration: "7 Months"
+        },
+        {
+            title: "Chatbots",
+            desc: "To automate store order enquiries within target we are building chatbots using botkit.ai. " +
+            "Helping stores employees to query on the fly and if bot is not able to resolve the issue, we create a ticket which another team looks into. " +
+            "Thus reducing the number of tickets to be processed by humans.",
+            role: "NodeJS developer ",
+            platform_framework: "botkit.ai, sentiment, axios",
+            resp: "Create chat interface and integrate with API's ",
+            duration: "5 Months"
+        }]
     $scope.about_me = {
-        text: "Life, Job And Pursuit of Happiness...\
-        \n\nHey! I’m Aishwat, I love to solve system architecture problems and design them end to end.\
-        \n\nI have 4yrs of Backend and frontend experience.\
-        \n\nStrong engineering professional with a Bachelor of Technology (B.Tech.) focused in Computer Science from National Institute of Technology Goa.\n\
-        \n\n \
-                \nStarted with Native Android App Development,few months later switched to another project with tech stack based on Nodejs,Mongo DB,Couchbase,Angular,ionic and other javascript frameworks \
-                \nAfter a year or so,moved to different project based on Swift and currently working on it. \
-                \n\nIn my free time, I like reading novels,movies,cycling and music. \
-                \nA lil time spent on stackoverflow and learning some random weired tech stuff.\
-                \nAnd ya I have some evil friends but they are always there when I need them."
+        text: `I am an experienced senior engineer with a demonstrated history of working in IT retail domains. I specialize in solving algorithmic problems and system design. 
+I did my Bachelors from National Institute of Technology Goa - computer science. Currently I am working with Target, primarily to code AI chat bots. In past, I have worked on Target.com front-end and Tesco's store availabilty back-end system.
+In terms of tech, I am skilled in nodeJS, reactJS, AWS cloud, mongoDB, native mobile app development & core JAVA
+Apart from geek stuff, I like to read fiction novels (Murakami fan) and a lil bit of bodybuilding, am not a pro bodybuilder but ya if we catchup I can tell you my transformation story.
+Thank you for reading my profile, appreciate it! 
+`
     }
     $scope.work_ex = {
-        text: "15 months IT experience Tesco Benguluru as Software Engineer.\
-        \nWorked on various projects involving node.js, angular.js, mongodb, couchbase, mocha.js, ionic framework, \
-        bootstrap, Android App development, json web tokens, Swift."
+        text: `Total 4 years of IT experience, being part of scrum teams in companies like Tesco Technology and Target Corporation. I have worked as a frontend and backend developer on various projects involving tech stack of NodeJS, ReactJS, MongoDB, GraphQL, AWS cloud and Java along with android app development and swift3`
     }
-    $scope.programming_skills = [{
-        language: "C, C++, JAVA",
-        rating: ["r1", "r1", "r1", "r2", "r3", "r3"]
-    }, {
-        language: "Javascript",
-        rating: ["r1", "r1", "r1", "r1", "r1", "r3"]
-    }, {
-        language: "Node.js",
-        rating: ["r1", "r1", "r1", "r1", "r2", "r3"]
-    }, {
-        language: "MongoDB, Couchbase",
-        rating: ["r1", "r1", "r1", "r1", "r3", "r3"]
-    }, {
-        language: "Angular Js",
-        rating: ["r1", "r1", "r1", "r3", "r3", "r3"]
-    }, {
-        language: "Android",
-        rating: ["r1", "r1", "r1", "r3", "r3", "r3"]
-    }, {
-        language: "SQL, PL/SQL, PHP, HTML, C#",
-        rating: ["r1", "r1", "r2", "r3", "r3", "r3"]
-    },]
+    $scope.programming_skills = [
+        {
+            language: "Javascript",
+            rating: ["r1", "r1", "r1", "r1", "r1", "r1"]
+        },
+        {
+            language: "NodeJS",
+            rating: ["r1", "r1", "r1", "r1", "r1", "r2"]
+        },
+        {
+            language: "ReactJS",
+            rating: ["r1", "r1", "r1", "r1", "r1", "r2"]
+        },
+        {
+            language: "MongoDB, Couchbase",
+            rating: ["r1", "r1", "r1", "r1", "r2", "r3"]
+        },
+        {
+            language: "C, C++, JAVA",
+            rating: ["r1", "r1", "r1", "r1", "r2", "r3"]
+        }, {
+            language: "Angular2",
+            rating: ["r1", "r1", "r1", "r3", "r3", "r3"]
+        }, {
+            language: "Android",
+            rating: ["r1", "r1", "r1", "r3", "r3", "r3"]
+        }, {
+            language: "SQL, Swift3, Ionic",
+            rating: ["r1", "r1", "r2", "r3", "r3", "r3"]
+        },]
 
     $scope.user = {
         name: '',
@@ -250,6 +298,7 @@ function homeCtrl($document, $scope, $window, $mdToast, $http, $sce, $mdMedia, $
         $scope.tiles[7].col_span = ($scope.tiles[7].col_span === "3" ? "1" : "3");
 
         $scope.tiles[7].row_span_xs = ($scope.tiles[7].row_span_xs === "2" ? "1" : "2");
+        $scope.tiles[7].row_span = ($scope.tiles[7].row_span === "2" ? "1" : "2");
 
         if (!$scope.tiles[7].showDetails) {
             reset_project_section();
@@ -425,9 +474,9 @@ function homeCtrl($document, $scope, $window, $mdToast, $http, $sce, $mdMedia, $
 
         console.log("index: " + index + " " + $scope.showProjectDetails[index]);
 
-        if ($mdMedia('max-width: 1435px')) {
-            $scope.tiles[7].row_span = $scope.showProjectDetails[index] ? "2" : "1";
-        }
+        // if ($mdMedia('max-width: 1435px')) {
+        //     $scope.tiles[7].row_span = $scope.showProjectDetails[index] ? "2" : "1";
+        // }
     }
     //Feedback
     $scope.feedback_progress = 0;

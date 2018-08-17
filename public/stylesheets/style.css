@@ -175,6 +175,7 @@ body {
 }
 
 .table1 {
+    border-radius: 10px;
     width: 100%;
     table-layout: auto;
     border-collapse: collapse;
@@ -276,7 +277,8 @@ body {
 }
 
 md-whiteframe {
-    background: #fff;
+    border-radius: 3px;
+    background: #fefefe;
     margin-top: 10px;
 }
 
@@ -285,9 +287,21 @@ md-whiteframe:focus {
     border: 0;
 }
 
+/*a {*/
+    /*text-decoration: none;*/
+    /**/
+    /*!*color: grey;*!*/
+/*}*/
 a {
+    color: #7B68EE;
     text-decoration: none;
-    /*color: grey;*/
+}
+
+a:hover
+{
+    color: #8e24aa;
+    text-decoration:none;
+    cursor:pointer;
 }
 
 .table5 {

@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Journey from "./components/Journey";
 import Pics from "./components/Pics";
 import CV from "./components/CV";
+import Run from "./components/Run";
 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -32,6 +33,9 @@ function App() {
                         </Route>
                         <Route path="/cv">
                             <CV/>
+                        </Route>
+                        <Route path="/run">
+                            <Run/>
                         </Route>
                         <Route path="/*">
                             <Home/>
